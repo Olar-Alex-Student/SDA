@@ -1,21 +1,34 @@
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import Ex_1.EcuatieGrad1;
+import Ex_2.Punct;
+import Ex_3.Poligon;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        //Ec1
-        EcuatieGrad1 ecuatieGrad1 = new EcuatieGrad1(1,2);
-        System.out.println(ecuatieGrad1.toString());
-        System.out.println(ecuatieGrad1.rezolva());
+        try {
+            // Ex_1
+            EcuatieGrad1 ecuatieGrad1 = new EcuatieGrad1(0, 1);
+            System.out.println("Ecuatia este:");
+            System.out.println(ecuatieGrad1.toString());
+            System.out.println("Si raspunsul la ecuatie: " + ecuatieGrad1.rezolva());
 
-        //Pct
-        Punct p1 = new Punct();
-        Punct p2 = new Punct(3,0);
-        System.out.println(p1.toString());
-        System.out.println(p1.distanta(p2));
+            System.out.println();
 
-        //Poligon
-        Poligon poligon = new Poligon();
+            // Ex_2
+            Punct punct_1 = new Punct();
+            Punct punct_2 = new Punct(1,5);
+            punct_1.setY(2);
+            punct_1.setX(5);
+            System.out.println("Distanta dintre " + punct_1 + "si " + punct_2 + " este:");
+            System.out.println(punct_1.distanta(punct_2));
+
+            System.out.println();
+
+            // Ex_3
+            Poligon poligon = new Poligon();
+        }
+        catch (Exception e) {
+
+        }
     }
 }
